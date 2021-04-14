@@ -2,7 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	let filesSpace = document.getElementById("files-space");
 	let btnReload = document.getElementById("btn-reload");
 	let innerHTMLContent = "";
-	let files = [/*Icon, Location, Title*/];
+	let files = [
+		["<i class='far fa-file-code'></i>", "./carrusel.html", "Projects carousel"],
+		["<i class='far fa-file-code'></i>", "./smart.html", "Smartphone System"]
+	];
 
 	function constructInner() {
 		if (files.length > 0) {

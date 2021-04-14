@@ -58,3 +58,17 @@ a {
 	color: inherit;
 	display: block;
 }
+
+.horizontal-layout {
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+
+.horizontal-layout.center-horizontal {
+	justify-content: center;
+}
+
+.horizontal-layout.center-vertical {
+	align-items: center;
+}

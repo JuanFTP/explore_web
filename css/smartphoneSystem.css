@@ -1,0 +1,177 @@
+.squareFrame {
+	position: relative;
+	height: 640px;
+	width: 360px;
+	border-radius: 16px;
+	overflow: hidden;
+	font-family: "Roboto", sans-serif;
+}
+
+.visible {
+	display: block;
+}
+
+.bg-light {
+	background-color: #FAFAFA;
+}
+
+.color-light {
+	color: #FAFAFA;
+}
+
+.bg-dark {
+	background-color: #282C34;
+}
+
+.color-dark {
+	color: #282C34;
+}
+
+.bg-black-25 {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.bg-black-50 {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.psl {
+	padding-left: 12px;
+}
+
+.psr {
+	padding-right: 12px;
+}
+
+.br-1u {
+	border-radius: 8px;
+}
+
+.icon,
+.space {
+	display: inline-block;
+}
+
+.icon span,
+.space span {
+	display: block;
+	font-size: inherit;
+	height: inherit;
+	line-height: inherit;
+}
+
+	.icon:first-child,
+	.space:first-child {
+		margin-left: 0px;
+	}
+
+	.icon:last-child,
+	.space:last-child {
+		margin-right: 0px;
+	}
+
+/*Position*/
+.statusBar,
+.lockScreen {
+	position: absolute;
+}
+
+/*Status bar*/
+.statusBar {
+	top: 0;
+	height: 24px;
+	width: 100%;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.statusBar .icon {
+	font-size: 12px;
+	height: 16px;
+	line-height: 16px;
+}
+
+.statusBar .space {
+	width: 48px;
+	height: 16px;
+	line-height: 16px;
+	background-color: black;
+}
+
+	.statusBar .icon.left,
+	.statusBar .space.left {
+		float: left;
+		margin-right: 4px;
+	}
+
+	.statusBar .icon.right,
+	.statusBar .space.right {
+		float: right;
+		margin-left: 4px;
+	}
+
+.lockScreen .filter,
+.lockScreen .overground,
+.lockScreen .currentDay,
+.lockScreen .currentTime,
+.lockScreen .currentDate,
+.lockScreen .currentInfo {
+	display: block;
+}
+
+.lockScreen .main-icon {
+	display: inline-block;
+}
+
+.lockScreen {
+	top: 0%;
+	height: 100%;
+	width: 100%;
+	background-image: url("./../src/backgrounds/001.jpg"); 
+	background-color: #282C34;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.lockScreen .filter {
+	height: 100%;
+	width: 100%;
+	backdrop-filter: blur(8px);
+}
+
+.lockScreen .overground {
+	height: 100%;
+	width: 100%;
+}
+
+.lockScreen .main-icon {
+	margin-top: 48px;
+	height: 48px;
+	line-height: 48px;
+	font-size: 24px;
+}
+
+.lockScreen .currentDay {
+	font-size: 24px;
+	height: 32px;
+	line-height: 32px;
+}
+
+.lockScreen .currentTime {
+	font-size: 56px;
+	height: 64px;
+	line-height: 56px;
+}
+
+.lockScreen .currentDate {
+	font-size: 16px;
+	height: 24px;
+	line-height: 24px;
+}
+
+.lockScreen .currentInfo {
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+}

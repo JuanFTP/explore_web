@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./src/icons/index.svg" type="image/x-icon">
+	<title>Smartphone System</title>
+	<!--Stylesheets-->
+	<link rel="stylesheet" href="./css/global.css">
+	<link rel="stylesheet" href="./css/smartphoneSystem.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+</head>
+
+<body>
+	<div id="frame" class="frame">
+		<div class="squareFrame color-light bg-dark">
+			<!--Lock Screen-->
+			<div id="lockScreen" class="lockScreen visible">
+				<div class="filter">
+					<div class="overground bg-black-50 psl psr">
+						<div class="main-icon">
+							<i class="fas fa-lock"></i>
+						</div>
+
+						<div class="currentDay">
+							<p>Viernes</p>
+						</div>
+
+						<div class="currentTime">
+							<p>11:35</p>
+						</div>
+
+						<div class="currentDate">
+							<p>02 de abril de 2021</p>
+						</div>
+
+						<div class="currentInfo">
+							<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Status bar-->
+			<div id="statusBar" class="statusBar psl psr bg-black-25">
+				<div class="icon left">
+					<span>BRAND</span>
+				</div>
+				<div class="icon right">
+					<span class="fa fa-battery-full"></span>
+				</div>
+				<div class="icon right">
+					<span class="fa fa-signal"></span>
+				</div>
+				<div class="icon right">
+					<span class="fa fa-clock"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Scripts-->
+	<script type="text/javascript" src="./js/global.js"></script>
+	<script type="text/javascript" src="./js/utilities.js"></script>
+	<script defer type="text/javascript" src="./js/smartphoneSystem.js"></script>
+</body>
+
+</html>
