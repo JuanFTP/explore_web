@@ -32,3 +32,7 @@ function stepAnimate() {
 		clearInterval(intervalAnimate);
 	}
 }
+
+function validateMinValue(value, min, character) {
+	return (value < min ? character + value : value);
+}

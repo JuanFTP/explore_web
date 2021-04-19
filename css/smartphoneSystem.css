@@ -1,177 +1,361 @@
-.squareFrame {
+:root {
+	--size-height: 640px;
+	--size-width: 360px;
+	--size-statusBar: 24px;
+	--size-appBar: 48px;
+
+	--dimen-unit: 4px;
+	--dimen-system-container-sides: 4px;
+	--dimen-app-container-sides: 16px;
+
+	--color-primary:#000;
+	--color-secondary:#000;
+	--color-accent:#000;
+
+	--color-light: #FAFAFA;
+	--color-light-hex: #FAFAFA;
+	--color-light-rgb: rgb(250, 250, 250);
+	--color-light-rgba-25: rgba(250, 250, 250, 0.25);
+	--color-light-rgba-50: rgba(250, 250, 250, 0.50);
+	--color-light-rgba-75: rgba(250, 250, 250, 0.75);
+
+	--color-dark: #282C34;
+	--color-dark-hex: #282C34;
+	--color-dark-rgb: rgb(40, 44, 52);
+	--color-dark-rgba-25: rgba(40, 44, 52, 0.25);
+	--color-dark-rgba-50: rgba(40, 44, 52, 0.50);
+	--color-dark-rgba-75: rgba(40, 44, 52, 0.75);
+}
+
+/*Generals*/
+.system {
 	position: relative;
-	height: 640px;
-	width: 360px;
-	border-radius: 16px;
+	font-family: 'Roboto', sans-serif;
+	height: var(--size-height);
+	width: var(--size-width);
 	overflow: hidden;
-	font-family: "Roboto", sans-serif;
 }
 
-.visible {
-	display: block;
-}
-
-.bg-light {
-	background-color: #FAFAFA;
-}
-
-.color-light {
-	color: #FAFAFA;
-}
-
-.bg-dark {
-	background-color: #282C34;
-}
-
-.color-dark {
-	color: #282C34;
-}
-
-.bg-black-25 {
-	background-color: rgba(0, 0, 0, 0.25);
-}
-
-.bg-black-50 {
-	background-color: rgba(0, 0, 0, 0.5);
-}
-
-.psl {
-	padding-left: 12px;
-}
-
-.psr {
-	padding-right: 12px;
-}
-
-.br-1u {
-	border-radius: 8px;
-}
-
-.icon,
-.space {
-	display: inline-block;
-}
-
-.icon span,
-.space span {
-	display: block;
-	font-size: inherit;
-	height: inherit;
-	line-height: inherit;
-}
-
-	.icon:first-child,
-	.space:first-child {
-		margin-left: 0px;
-	}
-
-	.icon:last-child,
-	.space:last-child {
-		margin-right: 0px;
-	}
-
-/*Position*/
-.statusBar,
-.lockScreen {
+.screen {
 	position: absolute;
 }
 
-/*Status bar*/
-.statusBar {
-	top: 0;
-	height: 24px;
-	width: 100%;
-	padding-top: 4px;
-	padding-bottom: 4px;
+.filter,
+.over {
+	position: relative;
+}	
+
+.blur {
+	backdrop-filter: blur(calc(var(--dimen-unit) * 2));
 }
 
-.statusBar .icon {
-	font-size: 12px;
-	height: 16px;
-	line-height: 16px;
+.ofh {
+	overflow: hidden;
 }
 
-.statusBar .space {
-	width: 48px;
-	height: 16px;
-	line-height: 16px;
-	background-color: black;
+.left {
+	float: left !important;
 }
 
-	.statusBar .icon.left,
-	.statusBar .space.left {
-		float: left;
-		margin-right: 4px;
-	}
+.right {
+	float: right !important;
+}
 
-	.statusBar .icon.right,
-	.statusBar .space.right {
-		float: right;
-		margin-left: 4px;
-	}
-
-.lockScreen .filter,
-.lockScreen .overground,
-.lockScreen .currentDay,
-.lockScreen .currentTime,
-.lockScreen .currentDate,
-.lockScreen .currentInfo {
+img {
 	display: block;
+	width: 100%;
+	height: 100%;
 }
 
-.lockScreen .main-icon {
+/*Sizes*/
+.fs {
+	height: 100%;
+	width: 100%;
+}
+
+.fw { width: 100%; }
+.fh { height: 100%; }
+.mw { width: 50%; }
+.mh { height: 50%; }
+
+/*Visibility*/
+.visible {
+	display: block !important;
+}
+
+.no-visible {
+	display: none !important;
+}
+
+/*Colors and coverage*/
+.text-dark {
+	color: var(--color-dark);;
+}
+
+.text-light {
+	color: var(--color-light);
+}
+
+.bg-light {
+	background-color: var(--color-light);;
+}
+
+.bg-light-25 {
+	background-color: var(--color-light-rgba-25);
+}
+
+.bg-light-50 {
+	background-color: var(--color-light-rgba-50);
+}
+
+.bg-light-75 {
+	background-color: var(--color-light-rgba-75);
+}
+
+.bg-dark {
+	background-color: var(--color-dark);
+}
+
+.bg-dark-25 {
+	background-color: var(--color-dark-rgba-25);
+}
+
+.bg-dark-50 {
+	background-color: var(--color-dark-rgba-50);
+}
+
+.bg-dark-75 {
+	background-color: var(--color-dark-rgba-75);
+}
+
+/*Containers*/
+.system-container {
+	height: 100%;
+	width: 100%;
+	padding-left: calc(var(--dimen-unit) * 3);
+	padding-right: calc(var(--dimen-unit) * 3);
+}
+
+.app-container {
+	height: 100%;
+	width: 100%;
+	padding-left: calc(var(--dimen-unit) * 4);
+	padding-right: calc(var(--dimen-unit) * 4);
+}
+
+/*Fonts*/
+.font-light {
+	font-weight: 300;
+}
+
+.font-regular {
+	font-weight: 400;
+}
+
+.font-semibold {
+	font-weight: 500;
+}
+
+.font-bold {
+	font-weight: 700;
+}
+
+.font-bolder {
+	font-weight: 900;
+}
+
+.txt-lvl-1 {
+	font-size: calc(var(--dimen-unit) * 6);
+}
+
+.txt-lvl-2 {
+	font-size: calc(var(--dimen-unit) * 5);
+}
+
+.txt-lvl-3 {
+	font-size: calc(var(--dimen-unit) * 4);
+}
+
+.txt-gnral {
+	font-size: calc(var(--dimen-unit) * 3);
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+/*Icons*/
+.icon {
 	display: inline-block;
 }
 
-.lockScreen {
-	top: 0%;
-	height: 100%;
-	width: 100%;
+	.icon span {
+		display: block;
+		width: 100%;
+		height: 100%;
+		line-height: inherit;
+	}
+
+/*Components*/
+.launcher {
+	top: 0;
 	background-image: url("./../src/backgrounds/001.jpg"); 
-	background-color: #282C34;
+	background-color: var(--color-dark);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-.lockScreen .filter {
-	height: 100%;
-	width: 100%;
-	backdrop-filter: blur(8px);
+.appBar {
+	top: var(--size-statusBar);
+	height: var(--size-appBar);
 }
 
-.lockScreen .overground {
-	height: 100%;
-	width: 100%;
+.statusBar {
+	top: 0;
+	height: var(--size-statusBar);
+	padding-top: var(--dimen-unit);
+	padding-bottom: var(--dimen-unit);
 }
 
-.lockScreen .main-icon {
-	margin-top: 48px;
-	height: 48px;
-	line-height: 48px;
-	font-size: 24px;
+	.statusBar .icon {
+		height: 16px;
+		width: 16px;
+		text-align: center;
+		line-height: 16px;
+		margin-left: var(--dimen-unit);
+	}
+
+	.statusBar .icon.brand,
+	.statusBar .icon.time {
+		width: auto;
+	}
+
+	.statusBar .icon:first-child {
+		margin-left: 0px;
+	}
+
+
+.lockScreen {
+	top: 0;
+	background-image: url("./../src/backgrounds/002.jpg"); 
+	background-color: var(--color-dark);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.lockScreen .currentDay {
-	font-size: 24px;
-	height: 32px;
-	line-height: 32px;
+	.lockScreenInner {
+		padding-top: calc(var(--size-statusBar) + var(--size-appBar));
+	}
+
+	.lockScreen .indicatorLock {
+		height: 32px;
+		width: 32px;
+		font-size: 16px;
+		line-height: 32px;
+	}
+
+	.lockScreen .indicatorDay {
+		font-size: 16px;
+		line-height: 24px;
+		height: 24px;
+	}
+
+	.lockScreen .indicatorClock {
+		font-size: 48px;
+		line-height: 56px;
+	}
+
+	.lockScreen .indicatorDate {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.lockScreen .notificationsSection {
+		margin-top: calc(var(--dimen-unit) * 4);
+		min-height: 64px;
+		max-height: 320px;
+	}
+
+	.lockScreen .indicatorUnlockMethod {
+		position: absolute;
+		bottom: 32px;
+		cursor: pointer;
+		left: calc(50% - 24px);
+		height: 48px;
+		width: 48px;
+		font-size: 24px;
+		line-height: 48px;
+	}
+
+	.lockScreen .indicatorInstruction {
+		position: absolute;
+		bottom: 16px;
+		left: calc(50% - 125px);
+		font-size: 12px;
+		line-height: 16px;
+		height: 16px;
+		width: 250px;
+	}
+
+.notify {
+	padding-top: calc(var(--dimen-unit) * 2);
+	padding-bottom: calc(var(--dimen-unit) * 2);
+	cursor: pointer;
 }
 
-.lockScreen .currentTime {
-	font-size: 56px;
-	height: 64px;
-	line-height: 56px;
-}
+	.notify .header {
+		height: 16px;
+	}
 
-.lockScreen .currentDate {
-	font-size: 16px;
-	height: 24px;
-	line-height: 24px;
-}
+		.notify .header .icon {
+			font-size: 12px;
+			line-height: 16px;
+		}
 
-.lockScreen .currentInfo {
-	font-size: 12px;
-	height: 20px;
-	line-height: 20px;
-}
+		.notify .header .app {
+			font-size: 12px;
+			line-height: 16px;
+			margin-left: var(--dimen-unit);
+		}
+
+	.notify .body {
+		height: 32px;
+		width: 100%;
+		padding-top: var(--dimen-unit);
+	}
+
+		.notify .body .avatar {
+			height: 24px;
+			width: 24px;
+		}
+
+		.notify .body .info {
+			height: 24px;
+			width: calc(100% - (24px + var(--dimen-unit)));
+			margin-left: var(--dimen-unit);
+		}
+
+			.notify .body .info .title {
+				font-size: 12px;
+				line-height: 12px;
+			}
+
+			.notify .body .info .subtitle {
+				font-size: 12px;
+				line-height: 12px;
+			}
+
+			.notify .body .info .time-ago {
+				font-size: 12px;
+				line-height: 12px;
+			}
