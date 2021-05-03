@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#2274A5">
 	<link rel="shortcut icon" href="./src/icons/index.svg" type="image/x-icon">
 	<title>Smartphone System</title>
 	<!--Stylesheets-->
@@ -128,32 +129,83 @@
 
 			<div id="statusBar" class="screen fw statusBar txt-gnral text-light">
 				<div class="system-container ofh">
-					<div class="icon brand left">
-						<span class="brand font-semibold">BRAND</span>
+					<div id="statusBar-small" class="row icons-row">
+						<div class="icon brand left">
+							<span class="brand font-semibold">BRAND</span>
+						</div>
+
+						<div class="icon right">
+							<span class="fa fa-battery-full"></span>
+						</div>
+
+						<div class="icon right">
+							<span class="fa fa-signal"></span>
+						</div>
+
+						<div class="icon right">
+							<span class="fa fa-wifi"></span>
+						</div>
+
+						<div class="icon right">
+							<span class="fa fa-clock"></span>
+						</div>
+
+						<div class="icon right">
+							<i class="far fa-bell-slash"></i>
+						</div>
+
+						<div class="icon time right no-visible">
+							<span class="time font-semibold">00:00</span>
+						</div>
 					</div>
 
-					<div class="icon right">
-						<span class="fa fa-battery-full"></span>
-					</div>
-
-					<div class="icon right">
-						<span class="fa fa-signal"></span>
-					</div>
-
-					<div class="icon right">
-						<span class="fa fa-wifi"></span>
-					</div>
-
-					<div class="icon right">
-						<span class="fa fa-clock"></span>
-					</div>
-
-					<div class="icon right">
-						<i class="far fa-bell-slash"></i>
-					</div>
-
-					<div class="icon time right no-visible">
-						<span class="time font-semibold">00:00</span>
+					<div id="statusBar-collapsed" class="row collapsed-menu dnone">
+						<div class="row icons">
+							<div class="layout-grid-row">
+								<div class="status-item-icon br x16">
+									<div class="square-icon">
+										<div class="icon-content">
+											<i class="fas fa-wifi"></i>
+										</div>
+									</div>
+								</div>
+								<div class="status-item-icon br x16">
+									<div class="square-icon">
+										<div class="icon-content">
+											<i class="fab fa-bluetooth"></i>
+										</div>
+									</div>
+								</div>
+								<div class="status-item-icon br x16">
+									<div class="square-icon">
+										<div class="icon-content">
+											<i class="fas fa-signal"></i>
+										</div>
+									</div>
+								</div>
+								<div class="status-item-icon br x16">
+									<div class="square-icon">
+										<div class="icon-content">
+											<i class="fas fa-lightbulb"></i>
+										</div>
+									</div>
+								</div>
+								<div class="status-item-icon br x16">
+									<div class="square-icon">
+										<div class="icon-content">
+											<i class="fas fa-tv"></i>
+										</div>
+									</div>
+								</div>
+								<div class="status-item-icon br x16">
+									<div class="square-icon">
+										<div class="icon-content">
+											<i class="fas fa-battery-full"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

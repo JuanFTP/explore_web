@@ -19,7 +19,6 @@ function clock() {
 
 function updateClock() {
 	time = new Date();
-	console.log(time);
 	updateComponents();
 }
 

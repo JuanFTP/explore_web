@@ -23,6 +23,10 @@
 	background-color: #FFFFFF;
 }
 
+.dnone {
+	display: none !important;
+}
+
 .br {
 	overflow: hidden;
 }
@@ -45,6 +49,11 @@
 
 .br.x16 {
 	border-radius: 16px;
+}
+
+.br.bds.x16 {
+	border-bottom-left-radius: 16px;
+	border-bottom-right-radius: 16px;
 }
 
 .br.x50 {
@@ -77,4 +86,9 @@ a {
 
 .horizontal-layout.center-vertical {
 	align-items: center;
+}
+
+.layout-grid-row {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
 }
